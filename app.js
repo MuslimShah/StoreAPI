@@ -13,7 +13,7 @@ const productRoutes = require('./routes/products')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-//express json
+//express json  
 app.use(express.json());
 
 app.use('/api/v1/products', productRoutes)
@@ -22,7 +22,8 @@ app.use(errorHandler)
 
 const start = async() => {
     try {
-        // await connectDb(process.env.MONGO_URL);
+        console.log('initializing connection ...');
+        await connectDb(process.env.MONGO_URL);
         app.listen(PORT, () => console.log(`connected to :${PORT}`))
 
     } catch (error) {
