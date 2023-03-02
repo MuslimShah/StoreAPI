@@ -1,3 +1,14 @@
+/***************************************************************
+ *      --------------SIMPLE API OF STORE PRODUCTS---------    *
+ * IN THIS API USER CAN GET ALL PRODUCTS AND THEIR ALL FIELDS  *
+ * USER CAN GET SOME SELECTED FIELDS                           * 
+ * USER CAN SEARCH USING NAME OF PRODUCT AND COMPANY           * 
+ * USER CAN SORT PRODUCTS                                      * 
+ * USER CAN LIMIT PRODUCTS                                     * 
+ * FURTHER DETAILS GOTO README.md                              * 
+ * *************************************************************/
+
+
 require('dotenv').config();
 //error handler package
 require('express-async-errors')
@@ -20,6 +31,7 @@ app.use('/api/v1/products', productRoutes)
 app.use(pageNotFound);
 app.use(errorHandler)
 
+//CONNECTING TO DB  AND STARTING SERVER
 const start = async() => {
     try {
         console.log('initializing connection ...');
