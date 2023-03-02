@@ -9,7 +9,7 @@ const getAllProductsStatic = async(req, res, next) => {
     }
     //GET ALL PRODUCTS
 const getAllProducts = async(req, res, next) => {
-    const { featured, company, search, sort, select, limit } = req.query;
+    const { featured, company, search, sort, select } = req.query;
     const queryObject = {};
     if (featured) {
         queryObject.featured = featured === 'true' ? true : false;
@@ -35,9 +35,11 @@ const getAllProducts = async(req, res, next) => {
         let selectList = select.split(',').join(' ');
         result = result.select(selectList);
     }
-    if (limit) {
-        result = result.limit(Number(limit))
-    }
+    let limit = Number(req.query.limit) || 10;
+    let page = Number(req.query.page) || 1;
+    let skip = (page - 1) * limit;
+    result = result.skip(skip).limit(Number(limit))
+
 
     let prods = await result;
     res.status(200).json({ numsOfHits: prods.length, prods });

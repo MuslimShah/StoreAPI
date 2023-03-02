@@ -30,8 +30,10 @@
 
 <h1>only selected fields</h1>
 <p>get('api/v1/products?select=(fields here separated by comma)')</p>
+<h1>Pagination</h1>
+<p>get('api/v1/products?page=(page here i.e 2)')</p>
 <h1>Example</h1>
-<code>
+<pre style="color:green;background-color:black">
 {
 "_id":"63fe4fc543b8fd3fe12f13da"
 "featured":"false"
@@ -42,5 +44,5 @@
 "company":"marcos"
 }
 
-</code>
+</pre>
 
