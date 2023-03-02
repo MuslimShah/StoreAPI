@@ -1,27 +1,33 @@
 
-  -------------- SIMPLE API OF STORE PRODUCTS ---------
-  IN THIS API USER CAN GET ALL PRODUCTS AND THEIR ALL FIELDS
+  <pre>-------------- SIMPLE API OF STORE PRODUCTS ---------</pre>
+  <p>IN THIS API USER CAN GET ALL PRODUCTS AND THEIR ALL FIELDS
   USER CAN GET SOME SELECTED FIELDS
   USER CAN SEARCH USING NAME OF PRODUCT AND COMPANY 
   USER CAN SORT PRODUCTS
   USER CAN LIMIT PRODUCTS
-  
+  </p>
 
-#REQUESTS
-get('api/v1/products');
+<h1>REQUESTS</h1>
+<p>get('api/v1/products');</p>
 
-#Search by name
-get('api/v1/products?name=(name here)')
 
-#search by company
-get('api/v1/products?company=(comapny name here)')
+<h1>Search by name</h1>
+<p>get('api/v1/products?name=(name here)')</p>
 
-#sort
-get('api/v1/products?sort=(name,price)')
-add a - prefix for decending 
 
-#limit
-get('api/v1/products?limit=(limit here)')
+<h1>search by company</h1>
+<p>get('api/v1/products?company=(comapny name here)')</p>
 
-#only selected fields
-get('api/v1/products?select=(fields here separated by comma)')
+
+<h1>sort</h1>
+<p>get('api/v1/products?sort=(name,price)')</p>
+<p>add a - prefix for decending </p>
+
+
+<h1>limit</h1>
+<p>get('api/v1/products?limit=(limit here)')</p>
+
+
+<h1>only selected fields</h1>
+<p>get('api/v1/products?select=(fields here separated by comma)')</p>
+
