@@ -1,11 +1,13 @@
 const Products = require('../models/product')
+    //THIS ROUTE IS ONLY FOR TESTING
 const getAllProductsStatic = async(req, res, next) => {
-    const prods = Products.find({})
-    let prodList = await prods;
-    console.log(prodList);
+        const prods = Products.find({})
+        let prodList = await prods;
+        console.log(prodList);
 
-    res.status(200).json({ msg: 'products recieved static', prodList });
-}
+        res.status(200).json({ msg: 'products recieved static', prodList });
+    }
+    //GET ALL PRODUCTS
 const getAllProducts = async(req, res, next) => {
     const { featured, company, search, sort, select, limit } = req.query;
     const queryObject = {};

@@ -30,4 +30,17 @@
 
 <h1>only selected fields</h1>
 <p>get('api/v1/products?select=(fields here separated by comma)')</p>
+<h1>Example</h1>
+<code>
+{
+"_id":"63fe4fc543b8fd3fe12f13da"
+"featured":"false"
+"rating":4
+"createdAt":"2023-02-28T19:01:59.291+00:00"
+"name":"accent chair"
+"price":25
+"company":"marcos"
+}
+
+</code>
 
